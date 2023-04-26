@@ -1,0 +1,248 @@
+/* --------basics ------------ */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.btn{
+    padding: 9px 1rem;
+    background-color: #1f1f1f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    width: 100px;
+
+}    
+
+
+
+h5{
+    margin: 10px 0;
+}    
+
+
+/* ------------------pets list  section------------------------- */
+
+
+.pet-selection{
+    border-radius: 6px;
+}
+
+
+.selection-btn{
+    padding: 0 6px;
+    font-weight: 600;
+
+}    
+
+.pet-adopt-section{
+    margin-top: 1rem;
+}    
+.pet-adopt-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: 2rem auto;
+    box-shadow: 0 3px 7px #a4a4a4 ;
+    padding: 6px 25px;
+}    
+.return{
+    color: #1f1f1f;
+    font-size: 30px;
+}    
+
+
+
+.filters-container{
+    width: 300px;
+    padding: 7px 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1f1f1f;
+    color: #eae9e9;
+    border-radius: 7px;
+}    
+
+.pets-container{
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33% ;
+    justify-content: space-between;
+    text-align: center;
+    
+}    
+
+.container{
+    margin: 2rem;
+    height: 400px;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+    padding: 1rem;
+    transition: transform .2s ease-in;
+    position: relative;
+    box-shadow: 0 0 5px #363636;
+}    
+.container:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 10px #0e0e0e;
+    transition: transform .2s ease-in;
+}    
+
+.pet-image{
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+}    
+
+.description{
+    color: #363333;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}    
+.pet-address{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}    
+
+
+/* ------------------responsiveness----------- */
+
+@media screen and (max-width:1023px) {
+    .pets-container{
+        grid-template-columns: 45% 45%;
+    }    
+    
+   
+}    
+
+
+@media screen and (max-width:767px) {
+    .pets-container{
+        justify-content: center;
+        grid-template-columns: 95%;
+    }    
+    
+    .filters-container{
+        font-size: 14px;
+        width: 200px;
+    }    
+
+    
+    
+}    
+
+
+
+
+/* ------------------adopt form section------------ */
+
+
+
+.adopt-form-section{
+    width: 100vw;
+    height: 100vh;
+    
+}
+.adopt-form-container{
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    background-image: url('https://img.freepik.com/premium-vector/vector-cartoon-dogs-with-big-bone-design_52569-1699.jpg?w=2000');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.form-container{
+    position: absolute;
+    top: 40%;
+    right: 0;
+    left: 0;
+    border: 3px solid rgb(139, 139, 139);
+    box-shadow: 0 0 10px grey;
+    width: 50%;
+    margin: auto;
+    background-color: #fff;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 20px;
+    
+}
+
+.form{
+    width: 80%;
+    text-align: left;
+    line-height: 30px;
+    margin: 2rem auto 0;
+}
+.form p{
+    margin-top: 1.5rem;
+}
+.form-submit{
+    text-align: right;
+}
+
+.form-input-container{
+    display: flex;
+    
+}
+
+.form div input{
+    font-size: 17px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid brown;
+    background-color: transparent;
+}
+
+
+@media screen and (max-width:1023px) {
+    .form-container{
+        top: 30%;
+        width: 70%;
+       
+    }
+    
+}
+
+@media screen and (max-width:767px) {
+    .form-container{ 
+        top: 20%;   
+        width: 80%;
+    }
+    .form-input-container{
+        display: block;
+    }
+    .form div input{
+        width: 150px;
+    }
+
+    .filters-container{
+        width:400px ;
+    }
+    
+}

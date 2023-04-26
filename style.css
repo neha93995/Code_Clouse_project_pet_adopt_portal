@@ -1,0 +1,500 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+/* -----------------basics----------------- */
+
+:root{
+    scroll-behavior: smooth;
+}
+
+button{
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+}
+
+
+a{
+    text-decoration: none;
+    border: none; 
+    color: #f8f8f8;
+ 
+}
+
+li{
+  text-decoration: none;
+  list-style: none;
+}
+
+
+/* ------------- Reused classes--------------- */
+
+.section-title{
+
+  font-size: 1.8rem;
+  font-weight: 700;
+
+}
+
+
+
+/* ------------------Navbar styles---------------- */
+.navbar {
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    transition: background .5s ease;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 1rem;
+  }
+  
+  .navbar-logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-menu li {
+    margin: 0 1rem;
+  }
+  
+  .navbar-menu a {
+      font-size: 1rem;
+      font-weight: 300;
+    }
+    .navbar-menu a:hover {
+        font-weight: 600;
+    }
+    .navbar-menu a:active {
+        font-weight: 600;
+    }
+  
+  .navbar-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    margin-right: 1rem;
+    display: none;
+  }
+  
+@media screen and (max-width: 768px){
+    .navbar-menu{
+      display: none;
+    }
+    
+    .navbar-toggle {
+      display: flex;
+    }
+    
+    .navbar-toggle i {
+      transform: rotate(90deg);
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .navbar-toggle.active i {
+      transform: rotate(0deg);
+    }
+    
+
+    .navbar-menu.active {
+      position: absolute;
+      top: 70vh;
+      left: 0;
+      right: 0;
+      width: 60%;
+      margin: 0 auto 100px;
+      background-color: #1f1f1faa ;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      padding: 1rem ;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+
+    }
+    
+    .navbar-menu li {
+      margin: 0.5rem 0;
+    }
+  
+  }
+  
+
+  @media screen and (max-width:600px) {
+    
+    .navbar-menu.active{
+        width: 90%;
+        grid-template-columns: auto auto;
+    }
+
+  }
+
+  /* -------------------home section----------------- */
+
+  .home-section{
+    height: 95vh;
+    width: 100vw;
+    background-image: linear-gradient(rgb(0, 0, 0,0.3) ,rgb(0, 0, 0,0.3)),url('./images/pet-background-img.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+
+
+  .home-container{
+      position: absolute;
+      top: 45%;
+      right: 10%;
+      text-align: center;
+      color: #c7c7c7;
+      
+    }
+    .home-container p{
+        font-size: 13px;
+        font-weight: 300;
+
+    }
+
+  .home-btn{
+    padding: 7px 45px;
+    margin-top: 20px;
+    background-color: #1f1f1f;
+    font-size: 1rem;
+    
+    
+    
+  }
+  .home-btn a{
+    color: #fff;
+  }
+
+  /* -----------------adopt-pet-section-------------------- */
+
+
+
+  .adopt-section{
+    height: 50vh;
+    background-color: #242323;
+    padding: 1.5rem;
+    color: #fdf8f8;
+    
+  }
+  
+  .adopt-container{
+    /* border: 2px solid #c7c7c7; */
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .adopt-descrition{
+    font-size: 10px;
+    font-weight: 200px;
+    width: 30%;
+  }
+  .adopt-descrition p{
+    font-size: 10px;
+    font-weight: 200;
+  }
+  .adopt-descrition h2{
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  .adopt-descrition div{
+    background-color: #fdf8f8;
+    width: 200px;
+    padding: 6px 10px;
+    margin: 20px auto;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 2px solid #2b2929;
+    border-radius: 7px;
+  }
+  
+  
+  .adopt-image{
+    height: 30vh;
+    transform: rotate(-45deg);
+  }
+  
+  
+  .adopt-btn{
+    color: #2b2929;
+  }
+  
+  
+  @media screen  and (max-width:1023px){
+    .adopt-container{
+      flex-direction: column;
+    }
+    .adopt-descrition{
+      width: 80%;
+    }
+    .adopt-image{
+      width: 100%;
+      height: 100%;
+    }
+    
+    
+  }
+
+/* ---------------------how to section------------- */
+
+
+.how-to-section{
+    padding-top: 80px;
+    text-align: center;
+    color: #4a4242;
+}
+
+
+.how-to-container{
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.how-to-image{
+  height: 70vh;
+}
+
+
+.features{
+  display: flex;
+  text-align: left;
+  gap: 10px;
+  margin: 30px 0;
+}
+.feature-logo{
+  font-size: 50px;
+
+}
+
+.how-to-description h4{
+  font-size: 15px;
+
+}
+
+.how-to-description p{
+  font-size: 10px;
+
+}
+
+.features:first-child
+{
+  margin-left: 50px;
+}
+
+.features:last-child{
+  margin-left: 50px ;
+}
+
+
+@media screen and (max-width:1023px){
+
+  .how-to-container{
+    display: block;
+  }
+  .how-to-image{
+    height: 35vh;
+  }
+  
+}
+
+
+/* ------------------------- process  section----------- */
+
+
+.process-section{
+  background-color: #1f1f1f;
+  color: #fdf8f8;
+  text-align: center;
+  padding: 2rem;
+}
+
+.process-container{
+  margin-top: 2rem ;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.process-description{
+  background-color: #242323;
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.process-description:hover{
+  box-shadow: 0 0 10px #4a4242;
+}
+
+.process-description h3{
+  font-weight: 400;
+
+}
+.process-description p{
+  font-size: 13px;
+  font-weight: 200;
+
+}
+
+.process-logo{
+  font-size: 30px;
+}
+
+@media screen and (max-width:1023px) {
+  .process-container{
+    flex-direction: column;
+  }
+  
+}
+
+
+/* ------------------------Question section-------------- */
+
+.question-section{
+  width: 60%;
+  margin: 3rem auto;
+}
+
+.question{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px auto;
+}
+
+.question h3{
+  font-size: 1rem;
+  font-weight: 400;
+}
+.answer{
+  font-size: 12px;
+  font-weight: 300;
+  margin: 10px auto;
+  display: none;
+}
+
+.answer.active{
+  display: block;
+  transition: all .4s  ease;
+
+}
+
+
+
+/* -------------------------about container------------ */
+
+
+.about-section{
+  width: 80%;
+  margin: auto;
+  text-align: justify;
+}
+
+.about-container
+{
+  margin: 3rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  
+}
+
+.about-image{
+  border-radius: 20px;
+
+}
+
+@media  screen and (max-width:1023px) {
+  
+  .about-container
+  {
+    flex-direction: column;
+    font-size: 14px;
+    gap: 10px;
+  }
+  .about-image{
+    width:100%;
+    margin: 1rem  auto;
+  }
+  
+}
+
+
+/* --------------------------footer section--------------- */
+
+.footer-section{
+  background-color: #242323;
+  height: 20vh;
+  position: relative;
+  padding: 2rem 8rem;
+  color: #fdf8f8;
+
+}
+
+.footer-heading{
+  background-color: #2b2929;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 13px;
+  text-align: right;
+}
+
+.footer-item{
+  font-size: 10px;
+  line-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  
+}
